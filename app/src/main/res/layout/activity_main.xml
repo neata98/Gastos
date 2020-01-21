@@ -7,37 +7,55 @@
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/catLayout"
+        android:id="@+id/catCardview"
         android:layout_width="379dp"
         android:layout_height="63dp"
         android:layout_marginTop="16dp"
         android:background="#7E57C2"
         app:cardBackgroundColor="#7E57C2"
         app:cardCornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/estaticosLayout"
+        app:layout_constraintEnd_toEndOf="@+id/estaticosCardView"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/estaticosLayout"
-        app:layout_constraintTop_toBottomOf="@+id/estaticosLayout">
+        app:layout_constraintStart_toStartOf="@+id/estaticosCardView"
+        app:layout_constraintTop_toBottomOf="@+id/estaticosCardView">
 
+        <TextView
+            android:id="@+id/textViewCat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="Categorías"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/estaticosLayout"
+        android:id="@+id/estaticosCardView"
         android:layout_width="379dp"
         android:layout_height="63dp"
         android:layout_marginTop="16dp"
         android:background="#26C6DA"
         app:cardBackgroundColor="#29B6F6"
         app:cardCornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/ingresosLayout"
+        app:layout_constraintEnd_toEndOf="@+id/ingresosCardView"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/gastosLayout"
-        app:layout_constraintTop_toBottomOf="@+id/ingresosLayout">
+        app:layout_constraintStart_toStartOf="@+id/gastosCardView"
+        app:layout_constraintTop_toBottomOf="@+id/ingresosCardView">
 
+        <TextView
+            android:id="@+id/textViewEstaticos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="Estáticos"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/gastosLayout"
+        android:id="@+id/gastosCardView"
         android:layout_width="187dp"
         android:layout_height="128dp"
         android:layout_marginStart="16dp"
@@ -48,10 +66,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textViewGastos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="Gastos"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/ingresosLayout"
+        android:id="@+id/ingresosCardView"
         android:layout_width="180dp"
         android:layout_height="127dp"
         android:layout_marginEnd="16dp"
@@ -59,7 +86,16 @@
         app:cardBackgroundColor="#39BB41"
         app:cardCornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gastosLayout">
+        app:layout_constraintTop_toTopOf="@+id/gastosCardView">
 
+        <TextView
+            android:id="@+id/textViewIngresos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="Ingresos"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
