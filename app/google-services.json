@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "951217164301",
+    "firebase_url": "https://neata-gastos.firebaseio.com",
+    "project_id": "neata-gastos",
+    "storage_bucket": "neata-gastos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951217164301:android:7a6d0ed289b00e493b8544",
+        "android_client_info": {
+          "package_name": "com.neata.gastos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951217164301-7n1vf6th24ppcrs4npo8rd5495u6vpn0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3cz38WgkIifT4V89pVVHwT8nAvNCUDFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951217164301-7n1vf6th24ppcrs4npo8rd5495u6vpn0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
