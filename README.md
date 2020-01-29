@@ -52,7 +52,7 @@ proporcionando al final de mes el ahorro conseguido.
 ### Capturas de pantalla preliminares
 
 **Pantalla principal**
-![pantalla-principal](https://drive.google.com/file/d/1ZA3D4CdnhYudL0uW-KQ1fEKnFHpxb3Qo/view?usp=sharing)
+![pantalla-principal](https://drive.google.com/uc?export=view&id=1ZA3D4CdnhYudL0uW-KQ1fEKnFHpxb3Qo)
 
 
 
