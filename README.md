@@ -53,7 +53,4 @@ proporcionando al final de mes el ahorro conseguido.
 
 **Pantalla principal**
 ![pantalla-principal](https://drive.google.com/uc?export=view&id=1ZA3D4CdnhYudL0uW-KQ1fEKnFHpxb3Qo)
-
-
-
-
+<a href="https://drive.google.com/uc?export=view&id=1ZA3D4CdnhYudL0uW-KQ1fEKnFHpxb3Qo"><img src="https://drive.google.com/uc?export=view&id=1ZA3D4CdnhYudL0uW-KQ1fEKnFHpxb3Qo" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a
