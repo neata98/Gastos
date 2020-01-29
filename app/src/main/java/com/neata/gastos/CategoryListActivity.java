@@ -64,7 +64,6 @@ public class CategoryListActivity extends AppCompatActivity {
         adapter = new CategoryAdapter(categorias, R.layout.category_item, new CategoryAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(final Categoria categoria, final int position) {
-                //TODO: abrir dialog para borrar categoria
                 AlertDialog.Builder builder = new AlertDialog.Builder(CategoryListActivity.this);
 // Add the buttons
                 builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
