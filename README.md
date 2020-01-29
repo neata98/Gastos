@@ -22,7 +22,7 @@ proporcionando al final de mes el ahorro conseguido.
 * Las categorías se pueden crear por el usuario.
 * La aplicación mostrará la suma de cada categoría.
 
-## Vistas priliminares realizadas
+## Vistas preliminares
 
 * Pantalla principal
   * 4 boxes: 1 gastos, 1 ingresos, 1 estaticos, 1 categorias
