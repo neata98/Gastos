@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "951217164301-8gegf5ji1t4retk1c97flhdcdb8cu36a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neata.gastos",
+            "certificate_hash": "44724e5b4b427b45f038b512ea18a1e54d537b47"
+          }
+        },
+        {
           "client_id": "951217164301-7n1vf6th24ppcrs4npo8rd5495u6vpn0.apps.googleusercontent.com",
           "client_type": 3
         }
