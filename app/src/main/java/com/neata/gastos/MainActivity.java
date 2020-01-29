@@ -1,16 +1,29 @@
 package com.neata.gastos;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.DialogFragment;
 
-public class MainActivity extends AppCompatActivity{
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.neata.gastos.modelo.Categoria;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
 
     private CardView gastosCardView;
+    private CardView catCardView;
+    public static List<Categoria> categorias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,29 +39,39 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-//        FirebaseFirestore db = FirebaseFirestore.getInstance();
-//        Map<String, Object> user = new HashMap<>();
-//        user.put("first", "Ada");
-//        user.put("last", "Lovelace");
-//        user.put("born", 1815);
-//
-//// Add a new document with a generated ID
-//        db.collection("Ahorro")
-//                .add(user)
-//                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-//                    @Override
-//                    public void onSuccess(DocumentReference documentReference) {
-//                        System.out.println("HEHEHHE: "+ documentReference.getId());
-//                        //Log.d("Good", "DocumentSnapshot added with ID: " + documentReference.getId());
-//                    }
-//                })
-//                .addOnFailureListener(new OnFailureListener() {
-//                    @Override
-//                    public void onFailure(@NonNull Exception e) {
-//                        Log.w("Bad", "Error adding document", e);
-//                    }
-//                });
+        catCardView = findViewById(R.id.catCardview);
+        catCardView.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View view) {
+                                               Intent intent = new Intent(MainActivity.this, CategoryListActivity.class);
+                                               startActivity(intent);
+                                           }
+                                       }
 
+        );
+        //fillCategories();
     }
 
+    private void fillCategories() {
+        categorias = new ArrayList<>();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("categoria")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                System.out.println("good: " + document.getId() + " => " + document.getData());
+
+                                categorias.add(new Categoria(document.getId(), (String) document.getData().get("nombre")));
+                                System.out.println(document.getData().get("nombre"));
+                            }
+                        } else {
+                            throw new Resources.NotFoundException("No se ha podido acceder a las categorías");
+                        }
+                    }
+                });
+    }
 }
